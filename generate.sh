@@ -17,6 +17,14 @@ if [ $EUID != 0 ]; then
     exit $?
 fi
 
+# Check if Unbound is installed
+if [ $(dpkg-query -W -f='${Status}' unbound 2>/dev/null | grep -c "ok installed") -eq 0 ]; then 
+    echo "I was unable to find unbound package installed..."
+    echo "Exiting..."
+    exit
+fi
+
+
 # Prepare the upstreams config directory
 if [ ! -d "${unbound_loc}" ]; then
         mkdir -p ${unbound_loc}
