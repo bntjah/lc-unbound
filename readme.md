@@ -6,5 +6,5 @@ I have published a few txt files here as we found some records that needed black
 The end result currently gives you a lc-host- result so that it can work with the Installer from Nexusofdoom [https://github.com/nexusofdoom/lancache-installer]
 
 
-##Todo
+## Todo
 I will probably create a seperate script in this repo that just asks you the ips and then changes them accordingly in the config files from Unbound...
